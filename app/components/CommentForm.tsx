@@ -11,7 +11,16 @@ export default function CommentForm({ postId, onSubmit }: CommentFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ content, postId, author: 'Anonymous' });
+    onSubmit({
+      content,
+      postId,
+      author: {
+        id: 'anonymous',
+        name: 'Anonymous',
+        avatar: '',
+        badge: 'user'
+      }
+    });
     setContent('');
   };
 

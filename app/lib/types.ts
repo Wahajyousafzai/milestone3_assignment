@@ -27,4 +27,5 @@ export interface Comment {
   liked?: boolean;
   replyTo?: string;
   replies?: Comment[];
+  postId: string;
 } 
